@@ -1,0 +1,242 @@
+@baseColor: #e92322;
+body{
+    min-width: 320px;
+}
+.header{
+    height: 50px;
+    // border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    .row{
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+        > div:nth-of-type(-n+3){
+            border-right: 1px solid #ccc;
+            > .wjs_code{
+                position: relative;
+                display: block;
+                >img{
+                    position: absolute;
+                    top: 49px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border:1px solid #ccc;
+                    border-top: none;
+                    z-index: 999;
+                    display: none;
+                }
+                &:hover{
+                    >img{
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+}
+// 导航条
+.wjs-nav{
+    margin-bottom: 0;
+    .navbar-toggle{
+        margin-top: 23px;
+    }
+    .navbar-brand{
+        height: 80px;
+        line-height: 50px;
+            span:first-child{
+                font-size: 40px;
+                color: @baseColor;
+            }
+            span:last-child{
+                font-size: 40px;
+                color: #333;
+            }
+    }
+    .navbar-nav{
+        li{
+            a{
+                line-height: 50px;
+                font-size: 16px;
+            }
+            a:hover,a:focus{
+                border-bottom: 3px solid @baseColor;
+                color: #777;
+            }
+        }
+        .active{
+            >a,a:hover,a:focus{
+            border-bottom: 3px solid @baseColor;
+            background-color: transparent;
+        }
+        }
+    }
+}
+// 轮播图
+.wjs-carousel{
+    .smal-img{
+        width: 100%;
+        display: block;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+    .pc-img{
+        display: block;
+        width: 100%;
+        height: 410px;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+// 信息块
+.wjs-info{
+    padding: 30px;
+    .wjs_icon{
+        font-size: 33px;
+    }
+    .row{
+        >div{
+            margin-top: 10px;
+            a:hover{
+            color: @baseColor;
+            }
+        }
+    }
+}
+// 预约块
+.wjs-reverse{
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    a:hover{
+        color: @baseColor;
+    }
+    .wjs_icon{
+        font-size: 18px;
+        padding-top: 5px;
+        vertical-align: middle;
+    }
+    .wjs-now{
+        color: @baseColor;
+        border-bottom: 1px dashed @baseColor;
+    }
+}
+// 产品块
+.wjs_product{
+    clear: both;
+    background-color: #eee;
+    padding: 20px;
+    .nav-tabs{
+        >li{
+            margin-bottom: 0;
+            >a{
+                line-height: 50px;
+                border: none;
+                background-color: transparent;
+            }
+            >a:hover{
+                border-bottom: 3px solid @baseColor;
+            }
+            &.active{
+                >a,a:hover,a:focus{
+                border: none;
+                background-color: #eee;
+                border-bottom: 3px solid @baseColor;
+                }
+            }
+        }
+    }
+}
+.wjs_pBox{
+    height: 150px;
+    margin-top: 20px;
+    background-color: #fff;
+    .wjs-pLeft{
+        margin-right: 100px;
+        height: 150px;
+        padding-top: 10px;
+        font-size: 12px;
+        >p{
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+        .row{
+            margin-left: -10px;
+            margin-right: -10px;
+            >div{
+                text-align: center;
+            }
+             }
+    }
+    .wjs-pRight{
+        width: 100px;
+        height: 150px;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        border-left: 1px dashed #ccc;
+        text-align: center;
+        padding-top: 30px;
+        >b{
+            font-size: 40px;
+            color: @baseColor;
+        }
+        >sub{
+            color: @baseColor;
+            bottom: 0;
+        }
+        &::before,&::after{
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #eee;
+            position: absolute;
+            left: -5px;
+        }
+        &::before{
+            top: -5px;
+            box-shadow: 0px -1px 1px #ddd inset;
+        }
+        &::after{
+            bottom: -5px;
+            box-shadow: 0px 1px 1px #ddd inset;
+        }
+        .wjs-tip{
+            width: 100%;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+    &.active{
+        background-color: @baseColor;
+        >.wjs-pRight{
+            >b,sub,p{
+                color: #fff;
+            }
+        }
+        >.wjs-pLeft{
+            color: #fff;
+            position: relative;
+            &::before{
+                content: "\e915";
+                font-family: "wjs";
+                position: absolute;
+                left: 0;
+                top: -5px;
+                font-size: 25px;
+            }
+        }
+    }
+}

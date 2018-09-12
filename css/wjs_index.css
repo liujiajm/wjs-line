@@ -1,0 +1,224 @@
+body {
+  min-width: 320px;
+}
+.header {
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.header .row {
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+.header .row > div:nth-of-type(-n+3) {
+  border-right: 1px solid #ccc;
+}
+.header .row > div:nth-of-type(-n+3) > .wjs_code {
+  position: relative;
+  display: block;
+}
+.header .row > div:nth-of-type(-n+3) > .wjs_code > img {
+  position: absolute;
+  top: 49px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 999;
+  display: none;
+}
+.header .row > div:nth-of-type(-n+3) > .wjs_code:hover > img {
+  display: block;
+}
+.wjs-nav {
+  margin-bottom: 0;
+}
+.wjs-nav .navbar-toggle {
+  margin-top: 23px;
+}
+.wjs-nav .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+.wjs-nav .navbar-brand span:first-child {
+  font-size: 40px;
+  color: #e92322;
+}
+.wjs-nav .navbar-brand span:last-child {
+  font-size: 40px;
+  color: #333;
+}
+.wjs-nav .navbar-nav li a {
+  line-height: 50px;
+  font-size: 16px;
+}
+.wjs-nav .navbar-nav li a:hover,
+.wjs-nav .navbar-nav li a:focus {
+  border-bottom: 3px solid #e92322;
+  color: #777;
+}
+.wjs-nav .navbar-nav .active > a,
+.wjs-nav .navbar-nav .active a:hover,
+.wjs-nav .navbar-nav .active a:focus {
+  border-bottom: 3px solid #e92322;
+  background-color: transparent;
+}
+.wjs-carousel .smal-img {
+  width: 100%;
+  display: block;
+}
+.wjs-carousel .smal-img img {
+  width: 100%;
+  display: block;
+}
+.wjs-carousel .pc-img {
+  display: block;
+  width: 100%;
+  height: 410px;
+  background-position: center center;
+  background-size: cover;
+}
+.wjs-info {
+  padding: 30px;
+}
+.wjs-info .wjs_icon {
+  font-size: 33px;
+}
+.wjs-info .row > div {
+  margin-top: 10px;
+}
+.wjs-info .row > div a:hover {
+  color: #e92322;
+}
+.wjs-reverse {
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.wjs-reverse a:hover {
+  color: #e92322;
+}
+.wjs-reverse .wjs_icon {
+  font-size: 18px;
+  padding-top: 5px;
+  vertical-align: middle;
+}
+.wjs-reverse .wjs-now {
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+.wjs_product {
+  clear: both;
+  background-color: #eee;
+  padding: 20px;
+}
+.wjs_product .nav-tabs > li {
+  margin-bottom: 0;
+}
+.wjs_product .nav-tabs > li > a {
+  line-height: 50px;
+  border: none;
+  background-color: transparent;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  border-bottom: 3px solid #e92322;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active a:hover,
+.wjs_product .nav-tabs > li.active a:focus {
+  border: none;
+  background-color: #eee;
+  border-bottom: 3px solid #e92322;
+}
+.wjs_pBox {
+  height: 150px;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.wjs_pBox .wjs-pLeft {
+  margin-right: 100px;
+  height: 150px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.wjs_pBox .wjs-pLeft > p {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+.wjs_pBox .wjs-pLeft .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.wjs_pBox .wjs-pLeft .row > div {
+  text-align: center;
+}
+.wjs_pBox .wjs-pRight {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  border-left: 1px dashed #ccc;
+  text-align: center;
+  padding-top: 30px;
+}
+.wjs_pBox .wjs-pRight > b {
+  font-size: 40px;
+  color: #e92322;
+}
+.wjs_pBox .wjs-pRight > sub {
+  color: #e92322;
+  bottom: 0;
+}
+.wjs_pBox .wjs-pRight::before,
+.wjs_pBox .wjs-pRight::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #eee;
+  position: absolute;
+  left: -5px;
+}
+.wjs_pBox .wjs-pRight::before {
+  top: -5px;
+  box-shadow: 0px -1px 1px #ddd inset;
+}
+.wjs_pBox .wjs-pRight::after {
+  bottom: -5px;
+  box-shadow: 0px 1px 1px #ddd inset;
+}
+.wjs_pBox .wjs-pRight .wjs-tip {
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wjs_pBox .wjs-pRight .wjs-tip span {
+  cursor: pointer;
+}
+.wjs_pBox.active {
+  background-color: #e92322;
+}
+.wjs_pBox.active > .wjs-pRight > b,
+.wjs_pBox.active > .wjs-pRight sub,
+.wjs_pBox.active > .wjs-pRight p {
+  color: #fff;
+}
+.wjs_pBox.active > .wjs-pLeft {
+  color: #fff;
+  position: relative;
+}
+.wjs_pBox.active > .wjs-pLeft::before {
+  content: "\e915";
+  font-family: "wjs";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 25px;
+}
